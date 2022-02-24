@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import data from "./Components/localization/content";
+import data from "./localization/content";
 import notImg from './assets/img/img.png';
 import not1Img from './assets/img/img1.jpg';
 import not2Img from './assets/img/img2.jpg';
