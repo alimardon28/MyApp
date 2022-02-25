@@ -196,3 +196,74 @@ padding: 0;
 font-size: 18px;
 line-height: 25px;
 }
+
+/* MODAL CSS */
+
+.modalDell,
+.modalAcer,
+.modalHp{
+  margin: 0;
+  padding: 60px 20px 20px 20px;
+  position: relative;
+  width: 700px;
+  height: 500px;
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  background-color: #fff;
+  z-index: 4;
+  border: none;
+  box-shadow: 2px 2px 10px #777;
+}
+
+.modalDellBtn,
+.modalAcerBtn,
+.modalHpBtn{
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ width: 40px;
+ height: 40px;
+ border: none;
+ outline: none;
+ cursor: pointer;
+ display: inline-block;
+ background-color: rgb(0, 0, 0,0);
+ border: 2px solid #fff;
+ color: #ccc;
+ transition: 3s initial;
+}
+
+.modalDellBtn:hover{
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.modalDellBtn:active{
+  background: rgb(255, 0, 0);
+  color: #fff;
+}
+
+.bi-x-lg{
+  font-size: 30px;
+}
+
+.modalAcerBtn:hover{
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.modalAcerBtn:active{
+  background: rgb(255, 0, 0);
+  color: #fff;
+}
+
+.modalHpBtn:hover{
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.modalHpBtn:active{
+  background: rgb(255, 0, 0);
+  color: #fff;
+}

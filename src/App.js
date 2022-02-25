@@ -10,6 +10,9 @@ import not4Img from './assets/img/img5.jpg';
 
 function App() {
   const [lang , setLang] = useState('uz');
+  const [openModalDell , setOpenModalDell] = useState(false);
+  const [openModallAcer , setopenModalAcer] = useState(false);
+  const [openModallHp , setopenModalHp] = useState(false);
       return (
           <>
             <div className='Language__box'>
@@ -45,16 +48,22 @@ function App() {
                    <h2>{data.Section__top.NoutbookHeading[lang].content}</h2>
                    <div className="NoutbookServices">
                        <div className="dellBox">
-                       <img src={not1Img} alt="img" />
-                       <p>{data.Section__top.dellBox[lang].content}</p>
+                              <img src={not1Img} alt="img" />
+                              <p>{data.Section__top.dellBox[lang].content}</p>
+                              <button onClick={() => setOpenModalDell(!openModalDell)} className='btn btn-primary modalDellButton'>{data.Section__top.dellBox.modalDellButton[lang].content}</button>
+                              <dialog className='modalDell' open={openModalDell}>{data.Section__top.dellBox.modalDell[lang].content} <button className='modalDellBtn' onClick={() => setOpenModalDell(false)}><i className='bi bi-x-lg'></i></button></dialog>
                        </div>
                        <div className="acerBox">
-                       <img src={not2Img} alt="img" />
-                       <p>{data.Section__top.acerBox[lang].content}</p>
+                              <img src={not2Img} alt="img" />
+                              <p>{data.Section__top.acerBox[lang].content}</p>
+                              <button onClick={() => setopenModalAcer(!openModallAcer)} className='btn btn-primary modalAcerButton'>{data.Section__top.acerBox.modalAcerButton[lang].content}</button>
+                              <dialog className='modalAcer' open={openModallAcer}>{data.Section__top.acerBox.modalAcer[lang].content}<button className='modalAcerBtn' onClick={() => setopenModalAcer(false)}><i className='bi bi-x-lg'></i></button></dialog>
                        </div>
                         <div className="hpBox">
-                          <img src={not3Img} alt="img" />
-                          <p>{data.Section__top.hpBox[lang].content}</p>
+                              <img src={not3Img} alt="img" />
+                              <p>{data.Section__top.hpBox[lang].content}</p>
+                              <button onClick={() => setopenModalHp(!openModallHp)} className='btn btn-primary modalHpButton'>{data.Section__top.hpBox.modalHpButton[lang].content}</button>
+                              <dialog className='modalHp' open={openModallHp}>{data.Section__top.hpBox.modalHp[lang].content}<button className='modalHpBtn' onClick={() => setopenModalHp(false)}><i className='bi bi-x-lg'></i></button> </dialog>
                         </div>
                    </div>
                    </div>
